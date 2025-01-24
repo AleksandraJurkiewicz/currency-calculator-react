@@ -14,4 +14,4 @@
 - HTML
 - React
 
-![Currency calculator - screenshoot](images/calc.png)
+![Currency calculator - screenshoot](assets/calc.png)
