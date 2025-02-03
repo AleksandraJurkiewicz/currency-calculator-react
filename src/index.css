@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+}
+
+*,
+::after, ::before {
+  box-sizing: inherit;
+}
+
+#root {
+  font-family: 'Arimo', sans-serif;
+  max-width: 900px;
+  min-width: 180px;
+  background-color: rgba(0, 0, 0, 0.816);
+  margin: 0 auto;    
+  box-sizing: border-box;
+  margin-top: 100px;
+  border: 2px solid rgba(0, 0, 0, 0.674);
+}

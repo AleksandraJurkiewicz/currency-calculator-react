@@ -1,0 +1,44 @@
+.form {
+    box-sizing: border-box;
+    border: 7px solid 7, 159, 86;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2.5;
+    font-size: large;
+    color: #f5f5eb;
+}
+
+.form__field--first {
+    padding: 20px;
+}
+
+.form__field--second {
+    padding : 0px 20px 20px 20px;
+}
+
+.form__input {
+    border-radius: 3px;
+    max-width: 100px;
+    text-align: center;
+}
+
+.form__button {
+    background-color: rgb(30, 169, 103);
+    color: #f5f5eb;
+    font-size: larger;
+    border-color: rgb(30, 169, 103);
+}
+
+.form__button:hover{
+    background-color: rgb(9, 157, 85);
+    border: 5px solid rgb(7, 116, 64);
+}
+
+.form__exchangeRate {
+    text-align: center;
+    line-height: 2;
+    color: #f5f5eb;
+    padding: 0px 10px 10px 10px;
+    font-size: medium;
+}
