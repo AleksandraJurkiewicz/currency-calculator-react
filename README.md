@@ -1,8 +1,17 @@
-# React + Vite
+# Aleksandra Jurkiewicz - currency calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### My first simply currency converter. 
+#### Instruction
+1. Choose currency (USD, EUR or GBP)
+2. Enter amount 
+3. Click on "Przelicz!" button 
+4. Check result :)
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Used technologies
+- JavaScript
+- CSS
+- HTML
+- React
+
+![Currency calculator - screenshoot](assets/calc.png)
