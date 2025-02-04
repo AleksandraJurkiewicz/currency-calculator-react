@@ -13,9 +13,7 @@ function App() {
       .rate;
 
     setResult({
-      sourceAmount: +amount,
       targetAmount: amount * rate,
-      currency,
     });
   }
 

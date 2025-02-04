@@ -4,10 +4,10 @@ export const Result = ({ result }) => (
     <div className="result">
         {!!result && (
             <>
-                <span>
-                    {result.sourceAmount.toFixed(2)}&nbsp;{result.currency}&nbsp;=&nbsp;
+                Twoja kwota:
+                <span className="result__amount">
+                    {result.targetAmount.toFixed(2)}&nbsp;zł
                 </span>
-                {result.targetAmount.toFixed(2)}&nbsp;PLN
             </>
         )}
     </div>

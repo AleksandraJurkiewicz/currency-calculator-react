@@ -13,3 +13,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.result__amount {
+    margin-left: 5px;
+}
