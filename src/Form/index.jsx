@@ -16,6 +16,7 @@ export const Form = ({ calculateResult, result }) => {
         <form className="form" onSubmit={onSubmit}>
             Wybierz walutę:
             <select
+                className="form__field--first"
                 value={currency}
                 onChange={({ target }) => setCurrency(target.value)}
             >
@@ -28,10 +29,10 @@ export const Form = ({ calculateResult, result }) => {
                     </option>
                 )))}
             </select>
-            <div className="form__field--first">
+            <div className="form__field--second">
                 <label>
                     Kwota w walucie:
-                    <input
+                    <input 
                         value={amount}
                         onChange={({ target }) => setAmount(target.value)}
                         type="number"
@@ -43,7 +44,7 @@ export const Form = ({ calculateResult, result }) => {
                     />
                 </label>
             </div>
-            <div className="form__field--second">
+            <div className="form__field--third">
                 <button className="form__button">Przelicz!</button>
             </div>
             <div className="form__exchangeRate">Kursy walut na dzień 22.05.2022:

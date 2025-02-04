@@ -10,10 +10,16 @@
 }
 
 .form__field--first {
-    padding: 20px;
+    margin-left: 10px;
+    padding: 5px;
 }
 
 .form__field--second {
+    padding: 20px;
+   
+}
+
+.form__field--third {
     padding : 0px 20px 20px 20px;
 }
 
@@ -21,6 +27,8 @@
     border-radius: 3px;
     max-width: 100px;
     text-align: center;
+    padding: 5px;
+    margin-left: 10px;
 }
 
 .form__button {
