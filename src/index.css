@@ -12,7 +12,7 @@ html {
 #root {
   font-family: 'Arimo', sans-serif;
   max-width: 900px;
-  min-width: 180px;
+  min-width: 200px;
   background-color: rgba(0, 0, 0, 0.816);
   margin: 0 auto;    
   box-sizing: border-box;
