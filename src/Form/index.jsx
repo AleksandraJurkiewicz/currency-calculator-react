@@ -47,10 +47,10 @@ export const Form = ({ calculateResult, result }) => {
             <div className="form__field--third">
                 <button className="form__button">Przelicz!</button>
             </div>
-            <div className="form__exchangeRate">Kursy walut na dzień 22.05.2022:
-                <div>1 dolar to 4,38 złoty</div>
-                <div>1 euro to 4,63 złoty</div>
-                <div>1 funt to 5,47 złoty</div>
+            <div className="form__exchangeRate">Kursy walut na dzień 11.02.2025:
+                <div>1 dolar to 4,04 złoty</div>
+                <div>1 euro to 4,18 złoty</div>
+                <div>1 funt to 5,00 złoty</div>
             </div>
 
             <Result result={result} />
