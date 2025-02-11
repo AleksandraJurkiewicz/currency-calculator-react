@@ -4,7 +4,7 @@ import { Result } from "./Result";
 import "./style.css";
 
 export const Form = ({ calculateResult, result }) => {
-    const [currency, setCurrency] = useState(currencies[0].short);
+    const [currency, setCurrency] = useState(currencies[0].name);
     const [amount, setAmount] = useState("");
 
     const onSubmit = (event) => {
@@ -22,8 +22,8 @@ export const Form = ({ calculateResult, result }) => {
             >
                 {currencies.map((currency => (
                     <option
-                        key={currency.short}
-                        value={currency.short}
+                        key={currency.name}
+                        value={currency.name}
                     >
                         {currency.name}
                     </option>
