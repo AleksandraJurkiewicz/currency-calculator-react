@@ -21,8 +21,8 @@ function App() {
   return (
     <>
       <div className="app">
+        <Clock />
         <header className="header">
-          <Clock />
           <h1>Kalkulator walut</h1>
         </header>
         <Form
