@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import { Title } from "./styled";
 import { currencies } from "./currencies";
 import { Form } from "./Form";
 import { Clock } from "./Clock";
@@ -20,11 +20,11 @@ function App() {
 
   return (
     <>
-      <div className="app">
+      <div>
         <Clock />
-        <header className="header">
+        <Title>
           <h1>Kalkulator walut</h1>
-        </header>
+        </Title>
         <Form
           result={result}
           calculateResult={calculateResult}
