@@ -1,4 +1,6 @@
-.result {
+import styled from "styled-components";
+
+export const ResultText = styled.div`
     color: rgb(30, 169, 103);
     line-height: 2;
     font-size: xx-large;
@@ -12,8 +14,8 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-}
+`;
 
-.result__amount {
+export const ResultAmount = styled.span`
     margin-left: 5px;
-}
+`;

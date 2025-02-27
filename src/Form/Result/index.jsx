@@ -1,14 +1,14 @@
-import "./style.css";
+import { ResultAmount, ResultText } from "./styled";
 
 export const Result = ({ result }) => (
-    <div className="result">
+    <ResultText>
         {!!result && (
             <>
                 Twoja kwota:
-                <span className="result__amount">
+                <ResultAmount>
                     {result.targetAmount.toFixed(2)}&nbsp;zł
-                </span>
+                </ResultAmount>
             </>
         )}
-    </div>
+    </ResultText>
 );
