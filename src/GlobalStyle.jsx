@@ -17,10 +17,10 @@ export const GlobalStyle = createGlobalStyle`
         font-family: 'Arimo', sans-serif;
         max-width: 900px;
         min-width: 200px;
-        background-color: rgba(0, 0, 0, 0.816);
+        background-color: ${({ theme }) => theme.color.black};
         margin: 0 auto;    
         box-sizing: border-box;
         margin-top: 100px;
-        border: 2px solid rgba(0, 0, 0, 0.674);
+        border: 2px solid ${({ theme }) => theme.color.black};
     }
 `;

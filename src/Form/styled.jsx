@@ -3,20 +3,20 @@ import styled from "styled-components";
 export const ExchangeRate = styled.div`
     text-align: center;
     line-height: 2;
-    color: #f5f5eb;
+    color: ${({ theme }) => theme.color.springWood};
     padding: 0px 10px 10px 10px;
     font-size: medium;
 `;
 
 export const Button = styled.button`
-    background-color: rgb(30, 169, 103);
+    background-color: ${({ theme }) => theme.color.emerald};
     color: #f5f5eb;
     font-size: larger;
-    border-color: rgb(30, 169, 103);
+    border-color: ${({ theme }) => theme.color.emerald};
 
     &:hover {
-        background-color: rgb(9, 157, 85);
-        border: 5px solid rgb(7, 116, 64);
+        background-color: ${({ theme }) => theme.color.salem};
+        border: 5px solid ${({ theme }) => theme.color.malahite};
     }
 `;
 
@@ -44,7 +44,7 @@ export const Converter = styled.form`
     text-align: center;
     line-height: 2.5;
     font-size: large;
-    color: #f5f5eb;
+    color: ${({ theme }) => theme.color.springWood};
 `;
 
 export const Currency = styled.select`
