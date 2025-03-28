@@ -51,3 +51,11 @@ export const Currency = styled.select`
     margin-left: 10px;
     padding: 5px;
 `;
+
+export const Loading = styled.p`
+    color: ${({ theme }) => theme.color.salem};
+`;
+
+export const Failure = styled.p`
+    color: ${({ theme }) => theme.color.red};
+`;

@@ -7,5 +7,6 @@ export const theme = {
         salem: "#099d55",
         malahite: "#077440",
         black: "#000000d0",
+        red: "#D11521",
     },
 };
