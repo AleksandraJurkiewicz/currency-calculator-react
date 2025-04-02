@@ -8,18 +8,18 @@ export const useRatesData = () => {
     useEffect(() => {
         const fetchRates = async () => {
             try {
-                const response = await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD");
+                const response = await fetch("currency-calculator-react/currencies.json");
             
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
             
-                const { rates, date } = await response.json();
+                const { data, meta } = await response.json();
 
                 setRatesData({
                     state: "success",
-                    rates,
-                    date,
+                    rates: data,
+                    date: meta,
                 });
 
             } catch {

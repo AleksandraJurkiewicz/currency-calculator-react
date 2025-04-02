@@ -8,14 +8,14 @@ export const Form = () => {
     const ratesData = useRatesData();
 
     const calculateResult = (currency, amount) => {
-        const rate = ratesData.rates[currency];
+        const rate = ratesData.rates[currency].value;
 
         setResult({
             targetAmount: amount * rate,
         });
     }
 
-    const [currency, setCurrency] = useState("EUR");
+    const [currency, setCurrency] = useState("PLN");
     const [amount, setAmount] = useState("");
 
     const onSubmit = (event) => {
@@ -70,10 +70,7 @@ export const Form = () => {
                                 <Button>Przelicz!</Button>
                             </ButtonWrapper>
                             <ExchangeRate>
-                                Kursy walut na dzień 11.02.2025:
-                                <div>1 dolar to 4,04 złoty</div>
-                                <div>1 euro to 4,18 złoty</div>
-                                <div>1 funt to 5,00 złoty</div>
+                                Kursy walut na dzień 30.03.2025:
                             </ExchangeRate>
                             <Result result={result} />
                         </>
