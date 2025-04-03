@@ -9,4 +9,8 @@ export const theme = {
         black: "#000000d0",
         red: "#D11521",
     },
+
+    breakpoint: {
+        mobileMax: 767,
+    },
 };

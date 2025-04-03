@@ -14,4 +14,8 @@ export const ResultText = styled.div`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        flex-basis: 100%;
+    }
 `;
