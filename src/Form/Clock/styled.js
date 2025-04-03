@@ -6,4 +6,10 @@ export const DateFormat = styled.div`
     font-family: monospace;
     color: ${({ theme }) => theme.color.white};
     font-size: large;
+    line-height: 1;
+`;
+
+export const CurrentDate = styled.p`
+    font-size: x-large;
+    padding-top: 0px;  
 `;

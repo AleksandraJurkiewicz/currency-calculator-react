@@ -1,5 +1,5 @@
 import { useCurrentDate } from "./useCurrentDate";
-import { DateFormat } from "./styled";
+import { DateFormat, CurrentDate } from "./styled";
 
 const formatDate = (date) => date.toLocaleString(undefined, {
     weekday: "long",
@@ -15,8 +15,8 @@ export const Clock = () => {
 
     return (
         <DateFormat>
-            {" "}
-            Kursy walut aktualne na dzień dziejszy tj. <p> {formatDate(date)} </p>
+            Kursy walut aktualne na dzień dziejszy tj. 
+            <CurrentDate> {formatDate(date)} </CurrentDate>
         </DateFormat>
     )
 };
