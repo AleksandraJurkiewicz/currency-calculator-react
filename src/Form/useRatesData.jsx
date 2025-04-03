@@ -8,7 +8,7 @@ export const useRatesData = () => {
     useEffect(() => {
         const fetchRates = async () => {
             try {
-                const response = await fetch("currency-calculator-react/currencies.json");
+                const response = await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD&currencies=&base_currency=PLN");
             
                 if (!response.ok) {
                     throw new Error(response.statusText);
