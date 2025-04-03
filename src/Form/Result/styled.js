@@ -15,7 +15,3 @@ export const ResultText = styled.div`
     justify-content: center;
     flex-wrap: wrap;
 `;
-
-export const ResultAmount = styled.span`
-    margin-left: 5px;
-`;

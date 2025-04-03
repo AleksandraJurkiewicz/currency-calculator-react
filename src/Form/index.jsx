@@ -12,10 +12,12 @@ export const Form = () => {
 
         setResult({
             targetAmount: amount * rate,
+            sourceAmount: +amount,
+            currency,
         });
     }
 
-    const [currency, setCurrency] = useState("PLN");
+    const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
 
     const onSubmit = (event) => {
@@ -54,7 +56,7 @@ export const Form = () => {
                             </Currency>
                             <AmountWrapper>
                                 <label>
-                                    Kwota w walucie:
+                                    Kwota w PLN:
                                     <Amount
                                         value={amount}
                                         onChange={({ target }) => setAmount(target.value)}
