@@ -12,12 +12,11 @@ const formatDate = (date) => date.toLocaleString(undefined, {
 
 export const Clock = () => {
     const date = useCurrentDate();
-    
+
     return (
         <DateFormat>
-            Dzisiaj jest 
             {" "}
-            {formatDate(date)}
+            Kursy walut aktualne na dzień dziejszy tj. <p> {formatDate(date)} </p>
         </DateFormat>
     )
 };
