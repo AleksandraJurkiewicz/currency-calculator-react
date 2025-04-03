@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Result } from "./Result";
-import { ExchangeRate, Button, ButtonWrapper, Amount, AmountWrapper, Converter, Currency, Loading, Failure } from "./styled";
+import { Button, ButtonWrapper, Amount, AmountWrapper, Converter, Currency, Loading, Failure } from "./styled";
 import { useRatesData } from "./useRatesData";
+import { Clock } from "./Clock";
 
 export const Form = () => {
     const [result, setResult] = useState();
@@ -71,10 +72,8 @@ export const Form = () => {
                             <ButtonWrapper>
                                 <Button>Przelicz!</Button>
                             </ButtonWrapper>
-                            <ExchangeRate>
-                                Kursy walut na dzień 30.03.2025:
-                            </ExchangeRate>
                             <Result result={result} />
+                            <Clock />
                         </>
                     )
                 )

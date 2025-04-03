@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const ExchangeRate = styled.div`
-    text-align: center;
-    line-height: 2;
-    color: ${({ theme }) => theme.color.springWood};
-    padding: 0px 10px 10px 10px;
-    font-size: medium;
-`;
-
 export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.emerald};
     color: #f5f5eb;
@@ -21,7 +13,7 @@ export const Button = styled.button`
 `;
 
 export const ButtonWrapper = styled.div`
-    padding : 0px 20px 20px 20px;
+    padding : 0px 20px 0px 20px;
 `;
 
 export const Amount = styled.input`

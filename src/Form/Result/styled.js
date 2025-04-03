@@ -9,7 +9,7 @@ export const ResultText = styled.div`
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 5px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
