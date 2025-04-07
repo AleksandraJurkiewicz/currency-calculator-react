@@ -5,6 +5,7 @@ export const Button = styled.button`
     color: #f5f5eb;
     font-size: larger;
     border-color: ${({ theme }) => theme.color.emerald};
+    padding: 10px;
 
     &:hover {
         background-color: ${({ theme }) => theme.color.salem};
@@ -45,7 +46,8 @@ export const Currency = styled.select`
 `;
 
 export const Loading = styled.p`
-    color: ${({ theme }) => theme.color.salem};
+    color: ${({ theme }) => theme.color.white};
+    background-color: ${({ theme }) => theme.color.black};
 `;
 
 export const Failure = styled.p`
