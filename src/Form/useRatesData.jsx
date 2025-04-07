@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const response = await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD&currencies=&base_currency=PLN");
+const API_URL = "https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD&currencies=&base_currency=PLN";
 
 export const useRatesData = () => {
     const [ratesData, setRatesData] = useState({
@@ -10,7 +10,7 @@ export const useRatesData = () => {
     useEffect(() => {
         const fetchRates = async () => {
             try {
-                response;
+                const response = await fetch(API_URL);
             
                 if (!response.ok) {
                     throw new Error(response.statusText);
