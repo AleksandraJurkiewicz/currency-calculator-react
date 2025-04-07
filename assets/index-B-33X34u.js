@@ -90,6 +90,7 @@ Error generating stack: `+u.message+`
     color: #f5f5eb;
     font-size: larger;
     border-color: ${({theme:i})=>i.color.emerald};
+    padding: 10px;
 
     &:hover {
         background-color: ${({theme:i})=>i.color.salem};
@@ -118,17 +119,18 @@ Error generating stack: `+u.message+`
     margin-left: 10px;
     padding: 5px;
 `,vm=Ge.p`
-    color: ${({theme:i})=>i.color.salem};
+    color: ${({theme:i})=>i.color.white};
+    background-color: ${({theme:i})=>i.color.black};
 `,wm=Ge.p`
     color: ${({theme:i})=>i.color.red};
-`,Sm=()=>{const[i,a]=je.useState({state:"loading"});return je.useEffect(()=>{setTimeout(async()=>{try{const f=await fetch("https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD&currencies=&base_currency=PLN");if(!f.ok)throw new Error(f.statusText);const{data:h,meta:w}=await f.json();a({state:"success",rates:h,date:w})}catch{a({state:"error"})}},1e3)},[]),i},km=()=>{const[i,a]=je.useState(new Date);return je.useEffect(()=>{const s=setInterval(()=>{a(new Date)},1e3);return()=>{clearInterval(s)}},[]),i},xm=Ge.div`
+`,Sm="https://api.currencyapi.com/v3/latest?apikey=cur_live_qXN07bLlepha9QC4ldlOPInxwnphA7l1YCgWmgtD&currencies=&base_currency=PLN",km=()=>{const[i,a]=je.useState({state:"loading"});return je.useEffect(()=>{setTimeout(async()=>{try{const f=await fetch(Sm);if(!f.ok)throw new Error(f.statusText);const{data:h,meta:w}=await f.json();a({state:"success",rates:h,date:w})}catch{a({state:"error"})}},1e3)},[]),i},xm=()=>{const[i,a]=je.useState(new Date);return je.useEffect(()=>{const s=setInterval(()=>{a(new Date)},1e3);return()=>{clearInterval(s)}},[]),i},Em=Ge.div`
     padding: 10px 10px 0px 0px;
     text-align: center;
     font-family: monospace;
     color: ${({theme:i})=>i.color.white};
     font-size: large;
     line-height: 1;
-`,Em=Ge.p`
+`,_m=Ge.p`
     font-size: x-large;
     padding-top: 0px;  
-`,_m=i=>i.toLocaleString(void 0,{weekday:"long",hour:"2-digit",minute:"2-digit",second:"2-digit",day:"numeric",month:"long"}),Cm=()=>{const i=km();return pe.jsxs(xm,{children:["Kursy walut aktualne na dzień dziejszy tj.",pe.jsxs(Em,{children:[" ",_m(i)," "]})]})},Pm=()=>{const[i,a]=je.useState(),s=Sm(),f=(z,M)=>{const I=s.rates[z].value;a({targetAmount:M*I,sourceAmount:+M,currency:z})},[h,w]=je.useState("EUR"),[E,L]=je.useState(""),P=z=>{z.preventDefault(),f(h,E)};return pe.jsx(ym,{onSubmit:P,children:s.state==="loading"?pe.jsx(vm,{children:"Poczekaj chwilkę, ładuję kursy walut."}):s.state==="error"?pe.jsx(wm,{children:"Coś poszło nie tak."}):pe.jsxs(pe.Fragment,{children:["Wybierz walutę",pe.jsx(gm,{value:h,onChange:({target:z})=>w(z.value),children:Object.keys(s.rates).map(z=>pe.jsx("option",{value:z,children:z},z))}),pe.jsx(mm,{children:pe.jsxs("label",{children:["Kwota w PLN:",pe.jsx(hm,{value:E,onChange:({target:z})=>L(z.value),type:"number",name:"value",step:"0.01",min:"0.01",required:!0})]})}),pe.jsx(pm,{children:pe.jsx(dm,{children:"Przelicz!"})}),pe.jsx(fm,{result:i}),pe.jsx(Cm,{})]})})};function zm(){return pe.jsx(pe.Fragment,{children:pe.jsxs("div",{children:[pe.jsx(am,{children:pe.jsx("h1",{children:"Kalkulator walut"})}),pe.jsx(Pm,{})]})})}const Nm={color:{white:"#FFFFFF",emerald:"#1EA967",emeraldShadow:"#179e5f",springWood:"#f5f5eb",salem:"#099d55",malahite:"#077440",black:"#000000d0",red:"#D11521"},breakpoint:{mobileMax:767}};Xp.createRoot(document.getElementById("root")).render(pe.jsx(je.StrictMode,{children:pe.jsxs(Bf,{theme:Nm,children:[pe.jsx(sm,{}),pe.jsx(zm,{})]})}));
+`,Cm=i=>i.toLocaleString(void 0,{weekday:"long",hour:"2-digit",minute:"2-digit",second:"2-digit",day:"numeric",month:"long"}),Pm=()=>{const i=xm();return pe.jsxs(Em,{children:["Kursy walut aktualne na dzień dziejszy tj.",pe.jsxs(_m,{children:[" ",Cm(i)," "]})]})},zm=()=>{const[i,a]=je.useState(),s=km(),f=(z,M)=>{const I=s.rates[z].value;a({targetAmount:M*I,sourceAmount:+M,currency:z})},[h,w]=je.useState("EUR"),[E,L]=je.useState(""),P=z=>{z.preventDefault(),f(h,E)};return pe.jsx(ym,{onSubmit:P,children:s.state==="loading"?pe.jsx(vm,{children:"Poczekaj chwilkę, ładuję kursy walut."}):s.state==="error"?pe.jsx(wm,{children:"Coś poszło nie tak."}):pe.jsxs(pe.Fragment,{children:["Wybierz walutę",pe.jsx(gm,{value:h,onChange:({target:z})=>w(z.value),children:Object.keys(s.rates).map(z=>pe.jsx("option",{value:z,children:z},z))}),pe.jsx(mm,{children:pe.jsxs("label",{children:["Kwota w PLN:",pe.jsx(hm,{value:E,onChange:({target:z})=>L(z.value),type:"number",name:"value",step:"0.01",min:"0.01",required:!0})]})}),pe.jsx(pm,{children:pe.jsx(dm,{children:"Przelicz!"})}),pe.jsx(fm,{result:i}),pe.jsx(Pm,{})]})})};function Nm(){return pe.jsxs("div",{children:[pe.jsx(am,{children:pe.jsx("h1",{children:"Kalkulator walut"})}),pe.jsx(zm,{})]})}const Rm={color:{white:"#FFFFFF",emerald:"#1EA967",emeraldShadow:"#179e5f",springWood:"#f5f5eb",salem:"#099d55",malahite:"#077440",black:"#000000d0",red:"#D11521"},breakpoint:{mobileMax:767}};Xp.createRoot(document.getElementById("root")).render(pe.jsx(je.StrictMode,{children:pe.jsxs(Bf,{theme:Rm,children:[pe.jsx(sm,{}),pe.jsx(Nm,{})]})}));
